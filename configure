@@ -1,6 +1,10 @@
 #! /bin/bash
 # This is not an autoconf generated configure
 #
+command -v bison >/dev/null 2>&1 && (echo "Bison installed") || (echo "No Bison Package, run [apt-geet install bison]");
+command -v flex >/dev/null 2>&1 && (echo "Flex installed") || (echo "No Flex Package, run [apt-geet install flex]");
+
+
 INCLUDE=${1:-"$PWD/include"}
 
 # Make a temp directory in build tree.
